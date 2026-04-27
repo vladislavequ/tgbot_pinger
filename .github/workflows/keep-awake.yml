@@ -4,7 +4,8 @@ on:
   schedule:
     # Запускаем каждые 12 минут (интервал должен быть меньше 15 минут, чтобы Render не уснул)
     - cron:  '*/12 * * * *'
-workflow_dispatch:
+    
+  workflow_dispatch:
 
 jobs:
   ping_render:
