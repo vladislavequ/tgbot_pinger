@@ -12,4 +12,4 @@ jobs:
     steps:
       - name: Send GET request to Render app
         run: |
-          curl -I -L https://ВАШ-САЙТ.onrender.com
+          curl -I -L https://tg-employee-bot.onrender.com
