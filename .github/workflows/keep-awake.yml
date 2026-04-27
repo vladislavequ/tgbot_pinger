@@ -1,0 +1,15 @@
+name: Keep Render App Awake
+
+on:
+  schedule:
+    # Запускаем каждые 14 минут (интервал должен быть меньше 15 минут, чтобы Render не уснул)
+    - cron:  '*/14 * * * *'
+  workflow_dispatch:
+
+jobs:
+  ping_render:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Send GET request to Render app
+        run: |
+          curl -I -L https://ВАШ-САЙТ.onrender.com
