@@ -6,10 +6,10 @@ on:
   workflow_dispatch:
 
 jobs:
-  ping_render:
+  ping_render_service:
     runs-on: ubuntu-latest
     steps:
-      - name: Send GET request to Render app
+      - name: Send ping to Render Service
         run: |
-          curl -I -L https://tg-employee-bot.onrender.com/health
+         curl -s -o /dev/null "https://tg-employee-bot.onrender.com/health"
 
